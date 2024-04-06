@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 26</title>
+    <style>
+        body {
+            background-color: #FA8BFF;
+            background-image: linear-gradient(45deg, #FA8BFF 0%, #ff2bab 52%, #2BFF88 90%);
+            min-height: 100vh;
+        }
+
+        .app-title {
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        .container {
+            background-color: white;
+            width: 470px;
+            display: flex;
+            justify-content: center;
+            margin: 10px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px black;
+        }
+
+        .emoji1 {
+            height: 250px;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        .btn-toggle {
+            font-size: 20px;
+            padding: 5px 20px;
+            border-radius: 40px;
+            border: none;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .btn-toggle:hover {
+            box-shadow: 0 0 10px black;
+
+        }
+
+        @media screen and (max-width:600px) {
+            .container {
+                width: 80%;
+            }
+
+            .emoji1 {
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="app-title"> Toggler</h1>
+    <div class="container">
+        <img src="./img/artist.png" class="emoji1" id="1Emoji" />
+    </div>
+    <div class="btn-container">
+        <button class="btn-toggle" onclick="toggle('sing')">Singing</button>
+        <button class="btn-toggle" onclick="toggle('dance')">Dance</button>
+    </div>
+
+    <script>
+        function toggle(state) {
+            const emojiElement = document.getElementById("1Emoji");
+            if (state == 'sing') {
+                emojiElement.src = './img/artist.png';
+            }
+            else {
+                emojiElement.src = './img/flamenco-dancer.png';
+            }
+        }
+
+    </script>
+</body>
+
+</html>
